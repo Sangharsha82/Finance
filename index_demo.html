@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <title>Admin</title>
+  </head>
+  <body class="bg-gray-100">
+    <nav class="bg-gray-800 p-4">
+      <div class="container mx-auto flex justify-between items-center">
+        <a class="text-white text-lg font-bold" href="#">ADMIN PANEL</a>
+        <button
+          id="navbarToggle"
+          class="text-white md:hidden focus:outline-none"
+        >
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16m-7 6h7"
+            ></path>
+          </svg>
+        </button>
+      </div>
+      <div id="navbarSupportedContent" class="hidden md:block">
+        <ul class="bg-blue-500 list-none p-2">
+          <li class="p-2">
+            <a href="#" class="text-white flex items-center"
+              ><i class="fa fa-chevron-right mr-2"></i> Product 1</a
+            >
+          </li>
+          <li class="p-2">
+            <a href="#" class="text-white flex items-center"
+              ><i class="fa fa-chevron-right mr-2"></i> Product 2</a
+            >
+          </li>
+          <li class="p-2">
+            <a href="#" class="text-white flex items-center"
+              ><i class="fa fa-chevron-right mr-2"></i> Product 3</a
+            >
+          </li>
+          <li class="p-2">
+            <a href="#" class="text-white flex items-center"
+              ><i class="fa fa-chevron-right mr-2"></i> Product 4</a
+            >
+          </li>
+          <li class="p-2">
+            <a href="#" class="text-white flex items-center"
+              ><i class="fa fa-chevron-right mr-2"></i> Product 5</a
+            >
+          </li>
+          <li class="p-2">
+            <a href="#" class="text-white flex items-center"
+              ><i class="fa fa-chevron-right mr-2"></i> Product 6</a
+            >
+          </li>
+          <li class="p-2">
+            <a href="#" class="text-white flex items-center"
+              ><i class="fa fa-chevron-right mr-2"></i> Product 7</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container mx-auto mt-4">
+      <div class="flex flex-col md:flex-row">
+        <div class="w-full md:w-1/4 hidden md:block">
+          <ul class="bg-blue-500 list-none p-2">
+            <li class="p-2">
+              <a href="#" class="text-white flex items-center"
+                ><i class="fa fa-chevron-right mr-2"></i> Product 1</a
+              >
+            </li>
+            <li class="p-2">
+              <a href="#" class="text-white flex items-center"
+                ><i class="fa fa-chevron-right mr-2"></i> Product 2</a
+              >
+            </li>
+            <li class="p-2">
+              <a href="#" class="text-white flex items-center"
+                ><i class="fa fa-chevron-right mr-2"></i> Product 3</a
+              >
+            </li>
+            <li class="p-2">
+              <a href="#" class="text-white flex items-center"
+                ><i class="fa fa-chevron-right mr-2"></i> Product 4</a
+              >
+            </li>
+            <li class="p-2">
+              <a href="#" class="text-white flex items-center"
+                ><i class="fa fa-chevron-right mr-2"></i> Product 5</a
+              >
+            </li>
+            <li class="p-2">
+              <a href="#" class="text-white flex items-center"
+                ><i class="fa fa-chevron-right mr-2"></i> Product 6</a
+              >
+            </li>
+            <li class="p-2">
+              <a href="#" class="text-white flex items-center"
+                ><i class="fa fa-chevron-right mr-2"></i> Product 7</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="md:hidden">
+          <ul
+            id="mobileMenuItems"
+            style="display: none"
+            class="bg-blue-500 list-none p-4"
+          >
+            <li>
+              <a
+                href="#"
+                onclick="toggleMenu()"
+                id="closeMenu"
+                style="display: block; color: white"
+                >Close Menu</a
+              >
+            </li>
+            <li><hr /></li>
+            <li>
+              <a
+                href="#"
+                onclick="toggleMenu()"
+                style="display: block; color: white"
+                >Product 1</a
+              >
+            </li>
+            <li><hr /></li>
+            <li>
+              <a
+                href="#"
+                onclick="toggleMenu()"
+                style="display: block; color: white"
+                >Product 2</a
+              >
+            </li>
+            <li><hr /></li>
+            <li>
+              <a
+                href="#"
+                onclick="toggleMenu()"
+                style="display: block; color: white"
+                >Product 3</a
+              >
+            </li>
+            <li><hr /></li>
+            <li>
+              <a
+                href="#"
+                onclick="toggleMenu()"
+                style="display: block; color: white"
+                >Product 4</a
+              >
+            </li>
+            <!-- Add more products as needed -->
+          </ul>
+        </div>
+
+        <!-- Main Content -->
+        <div class="w-full md:w-3/4 p-4">My Content</div>
+      </div>
+    </div>
+
+    <!-- Vanilla JS for Navbar Toggle -->
+    <script>
+      const navbarToggle = document.getElementById("navbarToggle");
+      const mobileMenu = document.getElementById("mobileMenuItems");
+
+      navbarToggle.addEventListener("click", () => {
+        mobileMenu.style.display =
+          mobileMenu.style.display === "none" || mobileMenu.style.display === ""
+            ? "block"
+            : "none";
+      });
+
+      function toggleMenu() {
+        mobileMenu.style.display = "none";
+      }
+    </script>
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </body>
+</html>
